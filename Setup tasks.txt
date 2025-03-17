@@ -1,0 +1,71 @@
+To get this set up, I need to:
+1. Brush up on my vscode-command line integration and make sure that's all working.
+2. Remind myself of my git login, github account, and key commands
+3. Create a django project
+4. Configure virtual environment
+5. Decide how to structure the project:
+- SQLite (for now) to store data on OSM and other sources
+- How many apps? One for now, but may need several
+- Table organisation for source database
+- Necessity/usage of DRF framework
+- etc
+
+
+6. Set up sqlite
+7. Review all my notes from my previous pdsurvey project, to get my knowledge back up to where it was
+8. Investigate data sources and decide on basic core data.
+9. Determine how best to pull in a basemap
+10. Make architectural decisions about DRF and javascript implementation, etc.
+
+
+
+Notes as I go:
+
+1. Brush up on my vscode-command line integration and make sure that's all working.
+
+Right, so we are using vscode and oh my zsh.
+
+Remember, I also have the WSL terminal. I can use this to run scripts outside the project itself, such as those that launch a project locally or via a provider like fly.io.
+
+Oh yes, and remember that the WSL drive is mounted. Its location for the new project should be:
+
+cd /mnt/c/Users/aldsm/Desktop/coding_projects/Zoning
+
+Now, I should remember that zsh is set up as my default WSL terminal. It should NOT be necessary to leave VSCODE except to do certain operations (like launching the app) that cannot be done within zsh.
+
+
+2. Remind myself of my git login, github account, and key commands
+
+I have created the git master branch at the new directory.
+
+
+4. Configure virtual environment
+The following code gets me set up from scratch:
+python -m venv .venv
+source .venv/bin/activate
+
+Note: 'pip list' is good for seeing a package list. Right now, all I have are pip and setuptools.
+
+And remember, 'pip freeze' is the one for listing them in a format that can be dropped into requirements.txt
+
+we added.venv to gitignore.
+
+3. Create a django project
+
+remember: 'python manage.py runserver' is our local running code.
+
+django-admin startproject upzoner .
+
+manage.py startapp upzonemap
+
+I then put the app name into settings.py so django knows to associate it.
+
+
+Setting up git repo.
+- Note: because my .git is in the Zoning folder, my repo is called Zoning.
+
+
+
+
+
+
